@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "ListadoComidaPersonal";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="accordion" id="accordionExample">
+
+
+	<div class="accordion-item">
+		<h2 class="accordion-header">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+				Listado de comida del Personal
+			</button>
+		</h2>
+		<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+			<div class="accordion-body">
+				<div class="container container-fluid border-1">
+					<div class="mb-4"></div>
+					<div class="custom-table">
+						<!-- Encabezado -->
+						<div class="custom-row">
+							<div class="custom-cell custom-day">Listado comida del personal</div>
+
+						</div>
+
+						<div class="custom-row">
+							<div class="custom-cell custom-day">
+								<select class="form-select" aria-label="Default select example">
+									<option class="Listado_comida" selected>Numero de empleado</option>
+									<option value="1">1142320</option>
+									<option value="2">1101212</option>
+								</select>
+							</div>
+							<div class="Listado_comida">
+								<select class="form-select" aria-label="Default select example">
+									<option class="Listado_comida" selected>Dia</option>
+									<option value="1">Lunes</option>
+									<option value="2">Martes</option>
+									<option value="1">Miercoles</option>
+									<option value="2">Jueves</option>
+								</select>
+							</div>
+
+
+
+						</div>
+
+						<div class="custom-row">
+							<div class="custom-cell custom-day">Registro del empleado</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	<style>
+		/* Estilos para la tabla */
+		.custom-table {
+			width: 100%;
+		}
+
+		.custom-row {
+			display: flex;
+			border: 1px solid #ddd;
+		}
+
+		.custom-cell {
+			flex: 1;
+			display: flex; /* Agregamos esto para centrar verticalmente */
+			justify-content: center; /* Centramos horizontalmente */
+			align-items: center; /* Centramos verticalmente */
+			padding: 8px;
+			border-left: 1px solid #ddd;
+		}
+
+		/* Estilos para los días */
+		.custom-day {
+			font-weight: bold;
+		}
+
+		.Listado_comida {
+			display: flex;
+		}
+
+
+		/* Estilos para las celdas editables */
+		[contenteditable="true"] {
+			border: 1px solid #ddd;
+			padding: 4px;
+		}
+	</style>
+
+</div>
+
+
+
+

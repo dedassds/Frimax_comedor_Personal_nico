@@ -32,10 +32,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Menu">Menu</a>
+                  
+                        <!-- Aquí comienza el menú desplegable de Entregables -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Entregables
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Menu">Menu</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="RegistroAlimentos">Registro de Alimentos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="ListadoComidaPersonal">ListadoComidaPersonal</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="ReporteCobroComidas">ReporteCobroComidas</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="InformeUsoQR">InformeUsoQR</a></li>
+                                <!-- Agrega aquí los enlaces a las demás vistas que has creado -->
+                            </ul>
                         </li>
+                        <!-- Aquí termina el menú desplegable de Entregables -->
                     </ul>
+
                     <partial name="_LoginPartial" />
                 </div>
             </div>

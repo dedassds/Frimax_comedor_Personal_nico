@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewData["Title"] = "InformeUsoQR";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<div class="accordion" id="accordionExample">
+
+
+	<div class="accordion-item">
+		<h2 class="accordion-header">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQR" aria-expanded="false" aria-controls="collapseQR">
+				Informe de Uso de QR en el Comedor
+			</button>
+		</h2>
+		<div id="collapseQR" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+			<div class="accordion-body">
+				<div class="container container-fluid border-1">
+					<!-- Encabezado de la tabla -->
+					<div class="custom-row">
+						<div class="custom-cell custom-day">Empleado</div>
+						<div class="custom-cell custom-day">Número de empleado</div>
+						<div class="custom-cell custom-day">Día</div>
+						<div class="custom-cell custom-day">Hora de Uso</div>
+						<div class="custom-cell custom-day">Código QR</div>
+					</div>
+
+					<!-- Filas de datos -->
+					<div class="custom-row">
+						<div class="custom-cell">
+							<select class="form-select" aria-label="Default select example">
+								<option class="Listado_comida" selected>Nombre del empleado</option>
+								<option value="1">Empleado 1</option>
+								<option value="2">Empleado 2</option>
+							</select>
+						</div>
+						<div class="custom-cell">
+							<input type="text" class="form-control" placeholder="Número de empleado">
+						</div>
+						<div class="custom-cell">
+							<select class="form-select" aria-label="Default select example">
+								<option class="Listado_comida" selected>Día</option>
+								<option value="1">Lunes</option>
+								<option value="2">Martes</option>
+								<!-- Agrega más opciones de días aquí -->
+							</select>
+						</div>
+						<div class="custom-cell">
+							<input type="text" class="form-control" placeholder="Hora de Uso">
+						</div>
+						<div class="custom-cell">
+							<img src="ruta_del_qr.png" alt="Código QR" class="qr-code">
+						</div>
+					</div>
+
+					<!-- Puedes agregar más filas de datos aquí -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<style>
+	/* Estilos para la tabla */
+	.custom-table {
+		width: 100%;
+	}
+
+	.custom-row {
+		display: flex;
+		border: 1px solid #ddd;
+	}
+
+	.custom-cell {
+		flex: 1;
+		display: flex; /* Agregamos esto para centrar verticalmente */
+		justify-content: center; /* Centramos horizontalmente */
+		align-items: center; /* Centramos verticalmente */
+		padding: 8px;
+		border-left: 1px solid #ddd;
+	}
+
+	/* Estilos para los días */
+	.custom-day {
+		font-weight: bold;
+	}
+
+	.Listado_comida {
+		display: flex;
+	}
+
+
+	/* Estilos para las celdas editables */
+	[contenteditable="true"] {
+		border: 1px solid #ddd;
+		padding: 4px;
+	}
+</style>

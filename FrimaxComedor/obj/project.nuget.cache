@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ynx/ZM80Vc2B2deW9JgaOnT/C3dA2d1BVuEeYCLyz6wgp1KhXeeUlXwDL+oHSeUlY/rndbUwGCJjMozsEX03Qg==",
+  "dgSpecHash": "EEMBD5Sx2fnBKF5HMYaHNa30EW7L+wJy5lFPDisxiW3UQnsa5/clQ49zQPG227qgIB149Qp/ojNNFBbqhJq20Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\FrimaxComedor\\FrimaxComedor\\FrimaxComedor.csproj",
+  "projectFilePath": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\Frimax_comedor_Personal_nico\\FrimaxComedor\\FrimaxComedor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\perea\\.nuget\\packages\\bootstrap\\5.3.0\\bootstrap.5.3.0.nupkg.sha512",
     "C:\\Users\\perea\\.nuget\\packages\\carbon.data.protection\\1.5.0\\carbon.data.protection.1.5.0.nupkg.sha512",

@@ -28,8 +28,27 @@ namespace FrimaxComedor.Controllers
             return View();
         }
 
+		public IActionResult RegistroAlimentos()
+		{
+			return View();
+		}
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult ListadoComidaPersonal()
+		{
+			return View();
+		}
+
+		public IActionResult ReporteCobroComidas()
+		{
+			return View();
+		}
+
+		public IActionResult InformeUsoQR()
+		{
+			return View();
+		}
+
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

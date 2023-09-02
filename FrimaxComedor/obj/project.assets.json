@@ -12045,11 +12045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\FrimaxComedor\\FrimaxComedor\\FrimaxComedor.csproj",
+      "projectUniqueName": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\Frimax_comedor_Personal_nico\\FrimaxComedor\\FrimaxComedor.csproj",
       "projectName": "FrimaxComedor",
-      "projectPath": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\FrimaxComedor\\FrimaxComedor\\FrimaxComedor.csproj",
+      "projectPath": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\Frimax_comedor_Personal_nico\\FrimaxComedor\\FrimaxComedor.csproj",
       "packagesPath": "C:\\Users\\perea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\FrimaxComedor\\FrimaxComedor\\obj\\",
+      "outputPath": "C:\\Users\\perea\\OneDrive\\Documentos\\GitHub\\Frimax_comedor_Personal_nico\\FrimaxComedor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\perea\\AppData\\Roaming\\NuGet\\NuGet.Config",
