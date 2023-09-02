@@ -1,0 +1,496 @@
+﻿@{
+    ViewData["Title"] = "Menu";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+<!--
+    Lo tienes mal ordenado
+    Tienes que revisar como funciona en Boostrap para que metas los elementos bien 
+    y se vean bien
+
+-->
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- Aquí va tu tabla y otros elementos HTML -->
+
+
+<script>
+    function guardar() {
+        var datos = [
+            { DiaId: 1, PlatilloId: 1, Valor: "Valor1" },
+            { DiaId: 1, PlatilloId: 2, Valor: "Valor2" },
+            // Aquí continúas con los datos de las demás celdas de la tabla...
+        ];
+
+        var jsonData = JSON.stringify(datos);
+
+        $.ajax({
+            type: "POST",
+            url: "/MenuDias/GuardarMenu",
+            contentType: "application/json",
+            data: jsonData,
+            success: function (data) {
+                var mensaje = document.getElementById("mensaje");
+                if (data.success) {
+                    mensaje.innerHTML = "Datos guardados exitosamente.";
+                } else {
+                    mensaje.innerHTML = "Error al guardar los datos.";
+                }
+            },
+            error: function () {
+                var mensaje = document.getElementById("mensaje");
+                mensaje.innerHTML = "Error al enviar los datos al servidor.";
+            }
+        });
+    }
+</script>
+
+<!-- Desde aqui comienza el Accordion para colocar los diferentes escenerarios del proyecto -->
+
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Menu - Comedor
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+									<select class="form-select" aria-label="Default select example">
+										<option selected>Selecciona la semana</option>
+										<option value="1">Semana 1</option>
+										<option value="2">Semana 2</option>
+										<option value="3">Semana 3</option>
+										<option value="1">Semana 4</option>
+										<option value="2">Semana 5</option>
+										<option value="3">Semana 6</option>
+										<option value="1">Semana 7</option>
+										<option value="2">Semana 8</option>
+										<option value="3">Semana 9</option>
+										<option value="3">Semana 10</option>
+										<option value="1"></option>
+										<option value="1">Semana 11</option>
+										<option value="2">Semana 12</option>
+										<option value="3">Semana 13</option>
+										<option value="1">Semana 14</option>
+										<option value="2">Semana 15</option>
+										<option value="3">Semana 16</option>
+										<option value="1">Semana 17</option>
+										<option value="2">Semana 18</option>
+										<option value="3">Semana 19</option>
+										<option value="3">Semana 20</option>
+										<option value="1"></option>
+										<option value="1">Semana 21</option>
+										<option value="2">Semana 22</option>
+										<option value="3">Semana 23</option>
+										<option value="1">Semana 24</option>
+										<option value="2">Semana 25</option>
+										<option value="3">Semana 26</option>
+										<option value="1">Semana 27</option>
+										<option value="2">Semana 28</option>
+										<option value="3">Semana 29</option>
+										<option value="3">Semana 30</option>
+										<option value="1"></option>
+										<option value="1">Semana 31</option>
+										<option value="2">Semana 32</option>
+										<option value="3">Semana 33</option>
+										<option value="1">Semana 34</option>
+										<option value="2">Semana 35</option>
+										<option value="3">Semana 36</option>
+										<option value="1">Semana 37</option>
+										<option value="2">Semana 38</option>
+										<option value="3">Semana 39</option>
+										<option value="3">Semana 40</option>
+										<option value="1"></option>
+										<option value="1">Semana 41</option>
+										<option value="2">Semana 42</option>
+										<option value="3">Semana 43</option>
+										<option value="1">Semana 44</option>
+										<option value="2">Semana 45</option>
+										<option value="3">Semana 46</option>
+										<option value="1">Semana 47</option>
+										<option value="2">Semana 48</option>
+										<option value="3">Semana 49</option>
+										<option value="3">Semana 50</option>
+										<option value="3">Semana 51</option>
+										<option value="3">Semana 52</option>
+									</select>
+
+								<div class="mb-4"></div>
+
+				<div class="container container-fluid border-1">
+					<div class="mb-4"></div>
+					<div class="custom-table">
+						<!-- Encabezado -->
+						<div class="custom-row">
+							<div class="custom-cell custom-day">Dia</div>
+							<div class="custom-cell custom-day">Lunes</div>
+							<div class="custom-cell custom-day">Martes</div>
+							<div class="custom-cell custom-day">Miércoles</div>
+							<div class="custom-cell custom-day">Jueves</div>
+							<div class="custom-cell custom-day">Viernes</div>
+						</div>
+									<div class="mb-4"></div>
+
+						<!-- Caldosa -->
+						<div class="custom-row">
+							<div class="custom-cell">Caldosa</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Platillo 1 -->
+						<div class="custom-row">
+							<div class="custom-cell">Platillo 1</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Platillo 2 -->
+						<div class="custom-row">
+							<div class="custom-cell">Platillo 2</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Guarniciones y otros elementos -->
+						<div class="custom-row">
+							<div class="custom-cell">Guarnicion 1</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Guarniciones y otros elementos -->
+						<div class="custom-row">
+							<div class="custom-cell">Guarnicion 2</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Guarniciones y otros elementos -->
+						<div class="custom-row">
+							<div class="custom-cell">Guarnicion 3</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Guarniciones y otros elementos -->
+						<div class="custom-row">
+							<div class="custom-cell">Complemento </div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Guarniciones y otros elementos -->
+						<div class="custom-row">
+							<div class="custom-cell">Postre</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+						<!-- Guarniciones y otros elementos -->
+						<div class="custom-row">
+							<div class="custom-cell">Agua</div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+							<div class="custom-cell" contenteditable="true"></div>
+						</div>
+
+														<!-- Continúa con las demás filas (Guarnicion 3, Complemento, Postre, Agua, etc.) de manera similar -->
+
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+									<button type="button" class="btn btn-primary">Guardar</button>
+
+
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                               Registro de alimentos
+                            </>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+							<div class="container container-fluid border-1">
+								<div class="mb-4"></div>
+								<div class="custom-table">
+									<!-- Encabezado -->
+									<div class="custom-row">
+										<div class="custom-cell custom-day">Numero de empleado</div>
+										<div class="custom-cell custom-day">Nombre de empleado</div>
+										<div class="custom-cell custom-day">Fecha de pedido</div>
+
+
+									</div>
+
+									<div class="custom-row">
+										<div class="custom-cell">
+											<select class="form-select" aria-label="Default select example">
+												<option selected>Numero de empleado</option>
+												<option value="1">1154020</option>
+											</select>
+										</div>
+										<div class="custom-cell">
+														<select class="form-select" aria-label="Default select example">
+											<option selected>Nombre de empleado</option>
+															<option value="1">Efrain Gutierrez Prado</option>							
+														</select>
+										</div>
+													<div class="custom-cell">
+														<select class="form-select" aria-label="Default select example">
+											<option selected>Fecha de pedido</option>
+															<option value="1">29/08/2023 - 7:45:00 Am</option>
+														</select>
+										            </div>
+									</div>
+								</div>
+								</div>
+							</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Listado de comida del Personal
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+			<div class="container container-fluid border-1">
+				<div class="mb-4"></div>
+				<div class="custom-table">
+					<!-- Encabezado -->
+					<div class="custom-row">
+						<div class="custom-cell custom-day">Listado comida del personal</div>
+
+					</div>
+
+					<div class="custom-row">
+						<div class="custom-cell custom-day">
+							<select class="form-select" aria-label="Default select example">
+								<option class="Listado_comida" selected>Numero de empleado</option>
+								<option value="1">1142320</option>
+								<option value="2">1101212</option>
+							</select>
+						</div>
+						<div class="Listado_comida">
+							<select class="form-select" aria-label="Default select example">
+								<option class="Listado_comida" selected>Dia</option>
+								<option value="1">Lunes</option>
+								<option value="2">Martes</option>
+								<option value="1">Miercoles</option>
+								<option value="2">Jueves</option>
+							</select>
+						</div>
+					
+					
+
+					</div>
+
+					<div class="custom-row">
+						<div class="custom-cell custom-day">Registro del empleado</div>
+
+					</div>
+
+				</div>
+				</div>
+			</div>
+                                
+                            
+                        
+                    </div>
+                </div>
+
+				<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      Reporte Cobro de Comidas
+    </button>
+  </h2>
+  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <div class="container container-fluid border-1">
+        <!-- Encabezado de la tabla -->
+        <div class="custom-row">
+          <div class="custom-cell custom-day">Listado comida del personal</div>
+          <div class="custom-cell custom-day">Número de empleado</div>
+          <div class="custom-cell custom-day">Día</div>
+          <div class="custom-cell custom-day">Plato</div>
+        </div>
+        
+        <!-- Filas de datos -->
+        <div class="custom-row">
+          <div class="custom-cell">
+            <select class="form-select" aria-label="Default select example">
+              <option class="Listado_comida" selected>Nombre del empleado</option>
+              <option value="1">Empleado 1</option>
+              <option value="2">Empleado 2</option>
+            </select>
+          </div>
+          <div class="custom-cell">
+            <input type="text" class="form-control" placeholder="Número de empleado">
+          </div>
+          <div class="custom-cell">
+            <select class="form-select" aria-label="Default select example">
+              <option class="Listado_comida" selected>Día</option>
+              <option value="1">Lunes</option>
+              <option value="2">Martes</option>
+              <!-- Agrega más opciones de días aquí -->
+            </select>
+          </div>
+          <div class="custom-cell">
+            <input type="text" class="form-control" placeholder="Plato">
+          </div>
+        </div>
+        
+        <!-- Puedes agregar más filas de datos aquí -->
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion-item">
+	<h2 class="accordion-header">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQR" aria-expanded="false" aria-controls="collapseQR">
+			Informe de Uso de QR en el Comedor
+		</button>
+	</h2>
+	<div id="collapseQR" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+		<div class="accordion-body">
+			<div class="container container-fluid border-1">
+				<!-- Encabezado de la tabla -->
+				<div class="custom-row">
+					<div class="custom-cell custom-day">Empleado</div>
+					<div class="custom-cell custom-day">Número de empleado</div>
+					<div class="custom-cell custom-day">Día</div>
+					<div class="custom-cell custom-day">Hora de Uso</div>
+					<div class="custom-cell custom-day">Código QR</div>
+				</div>
+
+				<!-- Filas de datos -->
+				<div class="custom-row">
+					<div class="custom-cell">
+						<select class="form-select" aria-label="Default select example">
+							<option class="Listado_comida" selected>Nombre del empleado</option>
+							<option value="1">Empleado 1</option>
+							<option value="2">Empleado 2</option>
+						</select>
+					</div>
+					<div class="custom-cell">
+						<input type="text" class="form-control" placeholder="Número de empleado">
+					</div>
+					<div class="custom-cell">
+						<select class="form-select" aria-label="Default select example">
+							<option class="Listado_comida" selected>Día</option>
+							<option value="1">Lunes</option>
+							<option value="2">Martes</option>
+							<!-- Agrega más opciones de días aquí -->
+						</select>
+					</div>
+					<div class="custom-cell">
+						<input type="text" class="form-control" placeholder="Hora de Uso">
+					</div>
+					<div class="custom-cell">
+						<img src="ruta_del_qr.png" alt="Código QR" class="qr-code">
+					</div>
+				</div>
+
+				<!-- Puedes agregar más filas de datos aquí -->
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+					
+
+				<!--Estilos dentro de la pagina-->
+<style>
+	/* Estilos para la tabla */
+	.custom-table {
+		width: 100%;
+	}
+
+	.custom-row {
+		display: flex;
+		border: 1px solid #ddd;
+	}
+
+	.custom-cell {
+		flex: 1;
+		display: flex; /* Agregamos esto para centrar verticalmente */
+		justify-content: center; /* Centramos horizontalmente */
+		align-items: center; /* Centramos verticalmente */
+		padding: 8px;
+		border-left: 1px solid #ddd;
+	}
+
+	/* Estilos para los días */
+	.custom-day {
+		font-weight: bold;
+	}
+
+	.Listado_comida {
+		display: flex;
+	}
+
+
+	/* Estilos para las celdas editables */
+	[contenteditable="true"] {
+		border: 1px solid #ddd;
+		padding: 4px;
+	}
+</style>
+
+
